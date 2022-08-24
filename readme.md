@@ -1,2 +1,3 @@
 # Intersection handler
 
+this is a work in progress, soon I'll write what it is...
