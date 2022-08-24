@@ -89,7 +89,9 @@ export const IntersectionHandler = {
   clear(){
     const keys = Array.from(callbacksRegistry.keys())
     keys.forEach(key => this.unobserve(key))
-    //callbacksRegistry.clear()
+    callbacksRegistry.clear()
 
   }
 }
+//prevent object to be modified externally
+Object.freeze(IntersectionHandler)
