@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import { IntersectionHandler, intersectionCallback } from "../IntersectionHandler";
+import  IntersectionHandler, { intersectionCallback } from "../IntersectionHandler";
 
 const testCallbacks1 = {
     intersecting: jest.fn()

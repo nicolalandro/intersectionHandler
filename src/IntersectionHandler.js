@@ -54,7 +54,7 @@ const observer = createObserver(intersectionCallback)
 
 const callbacksRegistry = new Map()
 
-export const IntersectionHandler = {
+const IntersectionHandler = {
   /**
    * 
    * @param {HTMLElement} element 
@@ -95,3 +95,5 @@ export const IntersectionHandler = {
 }
 //prevent object to be modified externally
 Object.freeze(IntersectionHandler)
+
+export default IntersectionHandler

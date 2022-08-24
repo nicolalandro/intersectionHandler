@@ -1,4 +1,4 @@
-import { IntersectionHandler } from "./src/IntersectionHandler"
+import  IntersectionHandler  from "./src/IntersectionHandler"
 
 const testCallbacks1 = {
   intersecting: ()=> console.log('intersecting1')
