@@ -68,6 +68,6 @@ describe('the intersection callback', ()=>{
           }
         ]
         intersectionCallback(entries)
-        expect(testCallbacks1.intersecting).toBeCalled()
+        expect(testCallbacks1.intersecting).toBeCalledWith(article)
     })
 })
