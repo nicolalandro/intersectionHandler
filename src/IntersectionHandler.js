@@ -2,32 +2,8 @@
 /**
  * @jest-environment jsdom
  */
-/**
- * 
- * @param {Function} callback 
- * @param {Object} options 
- * @returns IntersectionObserver
- */
-export function createObserver (callback, options = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.01
-}) {
-  try {
-    return new IntersectionObserver(callback, options)
-  } catch (error) {
-    //giusto un mock per far girare i test, la questione IntersectionObserver e jest/jestdom andrà rivista x bene
-    return {
-      observe(){
-
-      },
-      unobserve(){
-
-      }
-    }
-  }
+import createObserver from "./createObserver"
   
-}
 
 /**
  * 

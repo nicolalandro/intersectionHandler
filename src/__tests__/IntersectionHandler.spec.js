@@ -1,6 +1,10 @@
 /**
  * @jest-environment jsdom
  */
+
+
+import './../__mocks__/IntersectionObserver.mock'
+
 import  IntersectionHandler, { intersectionCallback } from "../IntersectionHandler";
 
 const testCallbacks1 = {
