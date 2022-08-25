@@ -55,7 +55,7 @@ describe('checking  methods of handler : ', ()=>{
 })
 
 describe('the intersection callback', ()=>{
-    test('la callback con un articolo ', () => {
+    test('callback with one entry ', () => {
         document.body.innerHTML = `
             <div class="article">dummy article</div>
         `
