@@ -16,11 +16,11 @@ export const intersectionCallback = (entries)=>{
     const {intersecting, unIntersecting} = callbackObject
     if(isIntersecting){
       if(intersecting){
-        intersecting()
+        intersecting(target)
       }
     } else {
       if(unIntersecting){
-        unIntersecting()
+        unIntersecting(target)
       }
     }
   })

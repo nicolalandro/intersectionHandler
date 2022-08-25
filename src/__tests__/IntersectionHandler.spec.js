@@ -51,6 +51,7 @@ describe('checking  methods of handler : ', ()=>{
         IntersectionHandler.clear()
         expect(registry.size).toBe(0)
     })
+    
 })
 
 describe('the intersection callback', ()=>{
