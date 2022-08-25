@@ -12,8 +12,7 @@ import createObserver from "./createObserver"
 export const intersectionCallback = (entries)=>{
   entries.forEach(async (entry) => {
     const {target , isIntersecting} = entry
-    let callbackObject = callbacksRegistry.get(target)
-    const {intersecting, unIntersecting} = callbackObject
+    const {intersecting, unIntersecting} = callbacksRegistry.get(target)
     if(isIntersecting){
       if(intersecting){
         intersecting(target)
