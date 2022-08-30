@@ -5,19 +5,10 @@
 
 import './../__mocks__/IntersectionObserver.mock'
 
-import  IntersectionHandler, { intersectionCallback } from "../IntersectionHandler";
+import  IntersectionHandler from "../IntersectionHandler";
 
-const testCallbacks1 = {
-    intersecting: jest.fn()
-}
+const testCallbacks1 = jest.fn()
   
-const testCallbacks2 = {
-    intersecting: jest.fn(),
-    unIntersecting: jest.fn(),
-}
-const testCallbacks3 = {
-    unIntersecting: jest.fn(),
-}
 
 beforeEach(() => {
     document.body.innerHTML = ''
@@ -54,20 +45,3 @@ describe('checking  methods of handler : ', ()=>{
     
 })
 
-describe('the intersection callback', ()=>{
-    test('callback with one entry ', () => {
-        document.body.innerHTML = `
-            <div class="article">dummy article</div>
-        `
-        const article = document.querySelector('.article')
-        IntersectionHandler.observe(article, testCallbacks1)
-        const entries = [
-          {
-            target: article,
-            isIntersecting: true
-          }
-        ]
-        intersectionCallback(entries)
-        expect(testCallbacks1.intersecting).toBeCalledWith(article)
-    })
-})

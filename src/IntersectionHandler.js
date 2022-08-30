@@ -3,31 +3,12 @@
  * @jest-environment jsdom
  */
 import createObserver from "./createObserver"
-  
+import intersectionCallback from "./intersectionCallback"
+import callbacksRegistry from "./callbacksRegistry"  
 
-/**
- * 
- * @param {Array} entries 
- */
-export const intersectionCallback = (entries)=>{
-  entries.forEach(async (entry) => {
-    const {target , isIntersecting} = entry
-    const {intersecting, unIntersecting} = callbacksRegistry.get(target)
-    if(isIntersecting){
-      if(intersecting){
-        intersecting(target)
-      }
-    } else {
-      if(unIntersecting){
-        unIntersecting(target)
-      }
-    }
-  })
-}
+
 
 const observer = createObserver(intersectionCallback)
-
-const callbacksRegistry = new Map()
 
 const IntersectionHandler = {
   /**
@@ -35,8 +16,8 @@ const IntersectionHandler = {
    * @param {HTMLElement} element 
    * @param {Object} callbacks 
    */
-  observe(element, callbacks){
-    callbacksRegistry.set(element, callbacks)
+  observe(element, callback){
+    callbacksRegistry.set(element, callback)
     observer.observe(element)
   },
   /**

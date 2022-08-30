@@ -1,28 +1,32 @@
 import  IntersectionHandler  from "./src/IntersectionHandler"
 
-const testCallbacks1 = {
-  intersecting: (target)=> {
+const testCallbacks1 = (entry)=> {
+  const {isIntersecting, target} = entry
+  if(isIntersecting){
     console.log('intersecting1')
     target.classList.add('in-view')
   }
-}
   
-const testCallbacks2 = {
-  intersecting: (target)=> {
+}
+const testCallbacks2 =(entry)=> {
+  const {isIntersecting, target} = entry
+  if(isIntersecting){
     console.log('intersecting2')
     target.classList.add('in-view')
-  },
-  unIntersecting: (target)=> {
+  } else {
     console.log('unIntersecting2')
     target.classList.remove('in-view')
-  },
-}
+  }
+  
+}  
 
-const testCallbacks3 = {
-  unIntersecting:  (target)=> {
+const testCallbacks3  = (entry)=> {
+  const {isIntersecting, target} = entry
+  if(!isIntersecting){
     console.log('unIntersecting3')
     target.classList.remove('in-view')
-  },
+  }
+  
 }
 
 
