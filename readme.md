@@ -5,7 +5,7 @@ simple centralized intersection observer and callback handler
 
 usage:
 
-`
+```
 const el = document.querySelector('.any-selector-you-may-have')
 const exampleCallback = (entry)=> {
   const {isIntersecting, target} = entry
@@ -18,5 +18,5 @@ const exampleCallback = (entry)=> {
 
 IntersectionHandler.observe(el, exampleCallback)
 
-`
+```
 
