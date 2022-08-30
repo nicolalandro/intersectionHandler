@@ -1,6 +1,6 @@
 # Intersection handler
 
-simple centralized intersection observer and callback handler
+simple wrapper to centralize intersection observer and the handlers for every element observed
 
 
 usage:
