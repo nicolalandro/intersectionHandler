@@ -15,7 +15,10 @@ usage:
 
 ```
 const el = document.querySelector('.any-selector-you-may-have')
-const exampleCallback = (entry)=> {
+
+// function called every time the element enters or exits the viewport
+
+const exampleCallback = (entry, observer)=> {
   const {isIntersecting, target} = entry
   if(isIntersecting){
     console.log('intersecting1')
@@ -25,6 +28,25 @@ const exampleCallback = (entry)=> {
 }
 
 IntersectionHandler.observe(el, exampleCallback)
+
+// function called the first time the element enters the viewport
+
+const exampleCallbackRunOnce = (entry)=> {
+  const {isIntersecting, target} = entry
+  if(isIntersecting){
+    console.log('intersecting1')
+    target.classList.add('in-view')
+    IntersectionHandler.unobserve(el)
+  }
+  
+}
+
+IntersectionHandler.observe(el, exampleCallbackRunOnce)
+
+// etc...
+
+
+
 
 ```
 
