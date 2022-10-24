@@ -12,6 +12,7 @@ const testCallbacks1 = jest.fn()
 
 beforeEach(() => {
     document.body.innerHTML = ''
+    IntersectionHandler.init({})
 })
 afterEach(() => {
     IntersectionHandler.clear()
@@ -19,6 +20,7 @@ afterEach(() => {
 })
 
 describe('checking  methods of handler : ', ()=>{
+    
     test('getObserver', ()=>{
         const observer = IntersectionHandler.getObserver()
         expect(observer).not.toBe(undefined)
@@ -32,7 +34,6 @@ describe('checking  methods of handler : ', ()=>{
         const registry = IntersectionHandler.getRegistry()
         const element1 = document.createElement('div')
         IntersectionHandler.observe(element1, testCallbacks1)
-        expect(registry.get(element1)).not.toBe(undefined)
         expect(registry.get(element1)).toBe(testCallbacks1)
         IntersectionHandler.unobserve(element1)
         expect(registry.get(element1)).toBe(undefined)

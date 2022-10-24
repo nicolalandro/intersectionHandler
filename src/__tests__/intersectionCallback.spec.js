@@ -8,12 +8,14 @@
  import  IntersectionHandler from "../IntersectionHandler";
  import  intersectionCallback from "../intersectionCallback";
  
+ 
  const testCallbacks1 = jest.fn()
    
  const testCallbacks2 = jest.fn()
  const testCallbacks3 = jest.fn()
  
  beforeEach(() => {
+  IntersectionHandler.init({})
      document.body.innerHTML = ''
  })
  afterEach(() => {
