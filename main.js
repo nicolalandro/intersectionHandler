@@ -1,5 +1,10 @@
 import  IntersectionHandler  from "./src/IntersectionHandler"
 
+IntersectionHandler.init({
+  root: null,
+  rootMargin: '50px',
+  threshold: 0.01
+})
 const testCallbacks1 = (entry)=> {
   const {isIntersecting, target} = entry
   if(isIntersecting){
