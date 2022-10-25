@@ -14,7 +14,11 @@ This has been my solution to solve this problem by keeping the function tidy (se
 usage:
 
 ```
+IntersectionHandler.init({}) // options object -> same as passed to the constructor of a new IntesectionObserver 
+
+
 const el = document.querySelector('.any-selector-you-may-have')
+
 
 // function called every time the element enters or exits the viewport
 
