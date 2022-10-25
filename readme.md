@@ -40,7 +40,7 @@ const exampleCallbackRunOnce = (entry)=> {
   if(isIntersecting){
     console.log('intersecting1')
     target.classList.add('in-view')
-    IntersectionHandler.unobserve(el)
+    IntersectionHandler.unobserve(target)
   }
   
 }
