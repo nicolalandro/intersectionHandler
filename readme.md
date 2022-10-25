@@ -57,4 +57,4 @@ IntersectionHandler.observe(el, exampleCallbackRunOnce)
 
 to unit test (jest) : `npm run test`  
 
-e2e test (cypress) : in a teminal tab: `npm run test` and in another tab:  `npm run e2e`
+e2e test (cypress) : in a teminal tab: `npm run dev` and in another tab:  `npm run e2e`
