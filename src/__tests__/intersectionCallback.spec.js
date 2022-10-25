@@ -43,9 +43,9 @@
      })
      test('callback with three entry ', () => {
          document.body.innerHTML = `
-             <div class="article">dummy article</div>
-             <div class="article">dummy article</div>
-             <div class="article">dummy article</div>
+             <div class="article">dummy article1</div>
+             <div class="article">dummy article2</div>
+             <div class="article">dummy article3</div>
          `
          const callbacks = [
              testCallbacks1,

@@ -10,26 +10,25 @@ describe('checking scroll behaviour', () => {
    
     cy.window().then((win) => {
       cy.wait(150)
-      cy.contains('just in view', { timeout: 10000 }).should('have.class', 'in-view')
-      cy.contains('add remove', { timeout: 10000 }).should('have.class', 'fullviewport')
-      cy.contains('only remove', { timeout: 10000 }).should('have.class', 'fullviewport')
-      cy.contains('only remove', { timeout: 10000 }).should('not.have.class', 'in-view')
+      cy.contains('Welcome').parent().parent().should('have.class', 'in-view')
+      cy.contains('To').parent().parent().should('have.class', 'in-view')
+
+      cy.contains('TESTING').should('not.exist')
+      cy.contains('Micro').should('not.exist')
+      cy.contains('Example').should('not.exist')
       
       cy.scrollTo(0, 100, { behavior: 'smooth' })
 
+      cy.contains('TESTING').parent().should('have.class', 'fullviewport')
+      cy.contains('TESTING').parent().should('have.class', 'in-view')
+
+
       cy.wait(150)
-      cy.contains('add remove', { timeout: 10000 }).should('have.class', 'in-view')
-      cy.scrollTo(0, win.innerHeight, { behavior: 'smooth' })
-      cy.contains('add remove', { timeout: 10000 }).should('have.class', 'in-view')
-      cy.scrollTo(0, win.innerHeight * 2, { behavior: 'smooth' })
-      cy.contains('add remove', { timeout: 10000 }).should('not.have.class', 'in-view')
-      cy.contains('only remove', { timeout: 10000 }).should('not.have.class', 'in-view')
-      cy.scrollTo(0, win.innerHeight, { behavior: 'smooth' })
-      cy.contains('add remove', { timeout: 10000 }).should('have.class', 'in-view')
-      cy.scrollTo(0, 0, { behavior: 'smooth' })
-      cy.contains('just in view', { timeout: 10000 }).should('have.class', 'in-view')
-      cy.contains('add remove', { timeout: 10000 }).should('not.have.class', 'in-view')
-      
+      cy.scrollTo(0, win.innerHeight + 100, { behavior: 'smooth' })
+      cy.contains('Micro').parent().parent().should('have.class', 'in-view')
+      cy.scrollTo(0, win.innerHeight +1000, { behavior: 'smooth' })
+      cy.contains('Example').parent().parent().should('have.class', 'in-view')
+       cy.contains('TESTING').should('not.exist')
     })
   })
 })
