@@ -11,7 +11,11 @@ import {microExample} from './src/callbacks/microExample'
     threshold: 0.1
   })
 
-  const callbacks = [welcomeTo,aTesting,microExample]
+  const callbacks = [
+    welcomeTo,
+    aTesting,
+    microExample
+  ]
     
   Array.from(document.querySelectorAll('.fullviewport')).forEach((el, index) => {
     const elementCallback = callbacks[index]
