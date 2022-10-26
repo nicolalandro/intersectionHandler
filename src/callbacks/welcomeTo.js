@@ -19,8 +19,8 @@ export const welcomeTo = (entry)=> {
       target.appendChild(container)
 
       const tml = new gsap.timeline();
-      tml.add(gsap.to(welcome, {y: 0, opacity: 1, duration: .6,ease : Power2.easeOut}))
-      tml.add(gsap.to(to, {y: 0, opacity: 1, duration: .4,ease : Power2.easeOut}), '-=.4')
+      tml.add(gsap.to(welcome, {y: 0, opacity: 1, duration: 1,ease : Power2.easeInOut}))
+      tml.add(gsap.to(to, {y: 0, opacity: 1, duration: 1,ease : Power2.easeInOut}), '-=.8')
       
     }
     

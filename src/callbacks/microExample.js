@@ -18,8 +18,8 @@ export  const microExample  = (entry)=> {
       gsap.set(example, {opacity:0,y:150})
       target.appendChild(container)
       const tml = new gsap.timeline();
-      tml.add(gsap.to(micro, {y: 0, opacity: 1, duration: .6,ease : Power2.easeOut, delay:.5}))
-      tml.add(gsap.to(example, {y: 0, opacity: 1, duration: .4,ease : Power2.easeOut}), '-=.4')
+      tml.add(gsap.to(micro, {y: 0, opacity: 1, duration: 1,ease : Power2.easeOut, delay:.5}))
+      tml.add(gsap.to(example, {y: 0, opacity: 1, duration: .7,ease : Power2.easeOut}), '-=.7')
       target.classList.add('in-view')
       
     }
