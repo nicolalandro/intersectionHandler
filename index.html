@@ -20,10 +20,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        border-bottom: solid 1px white;
+        transition:all 1s ease-out;
       }
       .in-view{
-        background-color: black;
-        color:white;
+        background-color: #000;
+        color:#fff;
+        
       }
       .text-container{
         height: 1.5em;
@@ -39,9 +42,8 @@
   <body>
     <div class="fullviewport"></div>
     <div class="fullviewport"></div>
-    <div class="fullviewport in-view"></div>
+    <div class="fullviewport"></div>
     <div class="fullviewport">I'm not being observed!!!</div>
-    
     <script type="module" src="/main.js"></script>
   </body>
 </html>

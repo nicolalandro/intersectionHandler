@@ -27,8 +27,11 @@ const IntersectionHandler = {
    * @param {HTMLElement} element
    */
   unobserve (element) {
-    callbacksRegistry.delete(element)
-    observer.unobserve(element)
+    if(element){
+      callbacksRegistry.delete(element)
+      observer.unobserve(element)
+    }
+    
   },
   /**
    *
