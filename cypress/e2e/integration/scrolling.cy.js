@@ -28,7 +28,7 @@ describe('checking scroll behaviour', () => {
       cy.contains('Micro').parent().parent().should('have.class', 'in-view')
       cy.scrollTo(0, win.innerHeight +1000, { behavior: 'smooth' })
       cy.contains('Example').parent().parent().should('have.class', 'in-view')
-       cy.contains('TESTING').should('not.exist')
+      cy.contains('TESTING').should('not.exist')
     })
   })
 })
