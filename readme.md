@@ -13,7 +13,7 @@ This has been my solution to solve this problem by keeping the function tidy (se
 
 usage:
 
-```
+```js
 IntersectionHandler.init({}) // options object -> same as passed to the constructor of a new IntesectionObserver 
 
 
