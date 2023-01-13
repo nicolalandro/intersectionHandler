@@ -24,7 +24,16 @@ This has been my solution to solve this problem by keeping the function tidy (se
 usage:
 
 ```js
-IntersectionHandler.init({}) // options object -> same as passed to the constructor of a new IntesectionObserver 
+import  IntersectionHandler  from './path/to/IntersectionHandler'
+
+// options object -> same as passed to the constructor of a new IntesectionObserver 
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.01
+}
+
+IntersectionHandler.init(options) 
 
 
 const el = document.querySelector('.any-selector-you-may-have')
@@ -35,10 +44,9 @@ const el = document.querySelector('.any-selector-you-may-have')
 const exampleCallback = (entry)=> {
   const {isIntersecting, target} = entry
   if(isIntersecting){
-    console.log('intersecting1')
+    console.log('exampleCallback')
     target.classList.add('in-view')
   }
-  
 }
 
 IntersectionHandler.observe(el, exampleCallback)
@@ -48,7 +56,7 @@ IntersectionHandler.observe(el, exampleCallback)
 const exampleCallbackRunOnce = (entry)=> {
   const {isIntersecting, target} = entry
   if(isIntersecting){
-    console.log('intersecting1')
+    console.log('exampleCallbackRunOnce')
     target.classList.add('in-view')
     IntersectionHandler.unobserve(target)
   }
