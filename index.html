@@ -21,6 +21,7 @@
         align-items: center;
         justify-content: center;
         transition:all 1s ease-out;
+        scroll-snap-align: start;
       }
       .in-view{
         background-color: #000;
@@ -36,13 +37,23 @@
         margin: .2em;
         display: block;
       }
+      .scroller {
+        height: 100vh;
+        overflow: auto;
+        -webkit-scroll-snap-type: y mandatory;
+        -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+    }
     </style>
   </head>
   <body>
-    <div class="fullviewport"></div>
-    <div class="fullviewport"></div>
-    <div class="fullviewport"></div>
-    <div class="fullviewport">I'm not being observed!!!</div>
+    <div class="scroller">
+      <div class="fullviewport"></div>
+      <div class="fullviewport"></div>
+      <div class="fullviewport"></div>
+      <div class="fullviewport">I'm not being observed!!!</div>
+    </div>
+    
     <script type="module" src="/main.js"></script>
   </body>
 </html>

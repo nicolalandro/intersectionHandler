@@ -16,19 +16,36 @@ describe('checking scroll behaviour', () => {
       cy.contains('TESTING').should('not.exist')
       cy.contains('Micro').should('not.exist')
       cy.contains('Example').should('not.exist')
-      
-      cy.scrollTo(0, 100, { behavior: 'smooth' })
+      console.log( cy.get('.fullviewport').eq(0))
+      cy.document().then((doc) => {
+       
+        const els = Array.from(doc.querySelectorAll('.fullviewport'))
+        els[1].scrollIntoView()
+        
+      });
 
       cy.contains('TESTING').parent().should('have.class', 'fullviewport')
       cy.contains('TESTING').parent().should('have.class', 'in-view')
 
 
       cy.wait(150)
-      cy.scrollTo(0, win.innerHeight + 100, { behavior: 'smooth' })
+      cy.document().then((doc) => {
+       
+        const els = Array.from(doc.querySelectorAll('.fullviewport'))
+        els[2].scrollIntoView()
+        
+      });
+      
       cy.contains('Micro').parent().parent().should('have.class', 'in-view')
-      cy.scrollTo(0, win.innerHeight +1000, { behavior: 'smooth' })
+      cy.document().then((doc) => {
+       
+        const els = Array.from(doc.querySelectorAll('.fullviewport'))
+        els[3].scrollIntoView()
+        
+      });
+      
       cy.contains('Example').parent().parent().should('have.class', 'in-view')
-      cy.contains('TESTING').should('not.exist')
+      cy.contains('TESTING').should('not.exist') 
     })
   })
 })
