@@ -3,7 +3,7 @@
  */
 import './../__mocks__/IntersectionObserver.mock'
 import {welcomeTo} from '../callbacks/welcomeTo'
-import  IntersectionHandler from "../IntersectionHandler";
+import  IntersectionHandler from "../intersection/IntersectionHandler";
 beforeEach(() => {
     // arrange
     IntersectionHandler.init({})

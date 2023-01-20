@@ -1,4 +1,4 @@
-import  IntersectionHandler  from "./src/IntersectionHandler"
+import  IntersectionHandler  from "./src/intersection/IntersectionHandler"
 import {welcomeTo} from './src/callbacks/welcomeTo'
 import {aTesting} from './src/callbacks/aTesting'
 import {microExample} from './src/callbacks/microExample'

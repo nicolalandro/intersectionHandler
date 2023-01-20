@@ -1,5 +1,5 @@
 import gsap, { Power2} from 'gsap'
-import IntersectionHandler from '../IntersectionHandler'
+import IntersectionHandler from '../intersection/IntersectionHandler'
 
 export  const microExample  = (entry)=> {
     const {isIntersecting, target} = entry

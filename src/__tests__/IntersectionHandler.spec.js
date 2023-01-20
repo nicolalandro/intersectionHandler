@@ -5,7 +5,7 @@
 
 import './../__mocks__/IntersectionObserver.mock'
 
-import  IntersectionHandler from "../IntersectionHandler";
+import  IntersectionHandler from "../intersection/IntersectionHandler";
 
 const testCallbacks1 = jest.fn()
   
