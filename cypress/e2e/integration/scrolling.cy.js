@@ -37,6 +37,7 @@ describe('checking scroll behaviour', () => {
       });
       
       cy.contains('Micro').parent().parent().should('have.class', 'in-view')
+      cy.contains('Example').parent().parent().should('have.class', 'in-view')
       cy.document().then((doc) => {
        
         const els = Array.from(doc.querySelectorAll('.fullviewport'))
@@ -44,7 +45,7 @@ describe('checking scroll behaviour', () => {
         
       });
       
-      cy.contains('Example').parent().parent().should('have.class', 'in-view')
+     
       cy.contains('TESTING').should('not.exist') 
     })
   })
