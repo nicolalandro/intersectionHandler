@@ -1,3 +1,5 @@
+![CI Build status](https://github.com/nicolalandro/intersectionHandler/actions/workflows/main.yml/badge.svg)
+
 # What's this
 
 Demo project in vanilla js to showcase the usage of unit and end to end tests. 
